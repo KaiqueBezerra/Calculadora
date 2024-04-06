@@ -4,11 +4,14 @@
     margin: 0;
 }
 
+/* Calculadora */
+
 #calculadora {
     border: 1px solid black;
     width: 240px;
-    margin: 100px auto;
+    margin: 100px auto 0 auto;
     text-align: center;
+    border-radius: 20px;
 }
 
 #visor {
@@ -18,7 +21,13 @@
         width: 100%;
         height: 100%;
         text-align: end;
-        background: #b1b1b1;
+        background: rgb(226,226,226);
+        background: linear-gradient(90deg, rgba(226,226,226,1) 0%, rgba(199,201,201,1) 27%, rgba(165,168,168,1) 100%);
+        color: red;
+        font-size: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border: none;
     }
 
     ::placeholder {
@@ -28,12 +37,92 @@
 
 #botoes {
     height: 200px;
-    background: #707070;
+    background: rgb(160,161,161);
+    background: linear-gradient(90deg, rgba(160,161,161,1) 0%, rgba(136,139,139,1) 35%, rgba(86,88,88,1) 100%);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 
     button {
+        border-radius: 10px;
         height: 30px;
         width: 30px;
         margin: 13px 5px 5px 5px;
         background: white;
+        cursor: pointer;
+    }
+}
+
+/* Temas */
+
+#temas {
+    width: 240px;
+    margin: 0 auto;
+
+    button {
+        margin-top: 15px;
+        width: 100%;
+        border-radius: 10px;
+        height: 30px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    #btn-1 {
+        background: rgb(160,161,161);
+        background: linear-gradient(90deg, rgba(160,161,161,1) 0%, rgba(136,139,139,1) 35%, rgba(86,88,88,1) 100%);
+        color: white;
+    }
+
+    #btn-2 {
+        background: rgb(223,251,250);
+        background: linear-gradient(90deg, rgba(223,251,250,1) 0%, rgba(196,254,254,1) 51%, rgba(119,247,242,1) 100%);
+        color: black;
+    }
+}
+
+
+/* Tema 1 */
+
+.tema1 {
+    #botoes {
+        background: rgb(160,161,161);
+        background: linear-gradient(90deg, rgba(160,161,161,1) 0%, rgba(136,139,139,1) 35%, rgba(86,88,88,1) 100%);
+        
+        button {
+            background: white;
+        }
+    }
+
+    #visor input {
+        background: rgb(226,226,226);
+        background: linear-gradient(90deg, rgba(226,226,226,1) 0%, rgba(199,201,201,1) 27%, rgba(165,168,168,1) 100%);
+        color: red;
+
+        ::placeholder {
+            color: red;
+        }
+    }
+}
+
+/* Tema 2 */
+
+.tema2 {
+    #botoes {
+        background: rgb(223,251,250);
+        background: linear-gradient(90deg, rgba(223,251,250,1) 0%, rgba(196,254,254,1) 51%, rgba(119,247,242,1) 100%);
+        
+        button {
+            background: white;
+            border: none;
+        }
+    }
+
+    #visor input {
+        background: white;
+        color: black;
+    }
+
+    #visor ::placeholder {
+        color: black;
     }
 }
